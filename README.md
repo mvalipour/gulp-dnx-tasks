@@ -13,7 +13,7 @@ There are generally two types of tasks that can be created using this:
 npm install gulp-dnx-tasks --save-dev
 ```
 
-```
+```js
 var gulp = require('gulp');
 var dnx = require('gulp-dnx-tasks');
 
