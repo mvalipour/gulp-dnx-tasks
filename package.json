@@ -1,6 +1,7 @@
 {
   "name": "gulp-dnx-tasks",
   "version": "1.0.0-beta1",
+  "main": "src/index.js",
   "dependencies": {
     "deep-extend": "^0.4.0",
     "gulp-shell": "^0.4.2",
