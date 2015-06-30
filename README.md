@@ -17,7 +17,7 @@ npm install gulp-dnx-tasks --save-dev
 var gulp = require('gulp');
 var dnx = require('gulp-dnx-tasks');
 
-dnx.webTasks(gulp);
+dnx.webTasks(gulp)
    .testTasks(gulp);
 ```
 
