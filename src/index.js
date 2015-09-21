@@ -43,8 +43,9 @@ function initTest(gulp, opts) {
     var testTasks = [];
     var testDirs = commands[opts.cmd] || [];
     testDirs.forEach(function (d) {
-        var cmd = 'dnx '+ d + ' ' + opts.cmd;
-        var tname = 'test_' + path.dirname(d);
+        var dir = path.dirname(d);
+        var cmd = 'dnx -p '+ dir + ' ' + opts.cmd;
+        var tname = 'test_' + dir;
         testTasks.push(tname);
         return gulp.task(tname, shell.task(cmd));
     });
@@ -84,7 +85,7 @@ function initWeb(gulp, opts) {
         }
 
         gutil.log('Starting web server...');
-        webProcess = spawn('dnx', [opts.base, opts.cmd]);
+        webProcess = spawn('dnx', ['-p', opts.base, opts.cmd]);
         gutil.log('Started web server.');
     };
 
